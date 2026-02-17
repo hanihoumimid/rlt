@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RLT - Rénovation Intérieure & Multi-Services à Pontault-Combault (77)</title>
+    <meta name="description" content="RLT : Votre artisan polyvalent à Pontault-Combault (77). Rénovation intérieure, menuiserie, plomberie, peinture, serrurerie d'urgence. Un interlocuteur unique pour vos projets.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto', sans-serif;
+        }
+        [x-cloak] { display: none !important; }
+    </style>
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Alpine.js CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Top Bar (Desktop Only) -->
+    <div class="bg-blue-700 text-white py-2 hidden md:block" data-aos="fade-down">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center text-sm">
+            <span>Pontault-Combault (77) - Votre expert en rénovation</span>
+            <div>
+                <a href="tel:0636344144" class="inline-flex items-center space-x-1 mr-4 hover:text-blue-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span>06 36 34 41 44</span>
+                </a>
+                <a href="tel:0986348213" class="inline-flex items-center space-x-1 hover:text-blue-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span>09 86 34 82 13</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-40 bg-white shadow-sm" x-data="{ open: false }" data-aos="fade-down">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <a href="#" class="flex-shrink-0 text-3xl font-extrabold text-blue-700 tracking-tight">RLT</a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 lg:space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-blue-700 font-medium">Qui sommes-nous</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-700 font-medium">Nos services</a>
+                <a href="#why-us" class="text-gray-700 hover:text-blue-700 font-medium">Nos engagements</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-700 font-medium">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button @click="open = !open" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                <svg x-show="!open" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg x-show="open" x-cloak class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div x-show="open" x-cloak class="fixed inset-0 z-50 bg-white flex flex-col items-center justify-center p-4 md:hidden">
+            <button @click="open = false" class="absolute top-4 right-4 p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <nav class="flex flex-col space-y-6 text-2xl">
+                <a href="#about" @click="open = false" class="text-gray-800 hover:text-blue-700 font-semibold">Qui sommes-nous</a>
+                <a href="#services" @click="open = false" class="text-gray-800 hover:text-blue-700 font-semibold">Nos services</a>
+                <a href="#why-us" @click="open = false" class="text-gray-800 hover:text-blue-700 font-semibold">Nos engagements</a>
+                <a href="#contact" @click="open = false" class="text-gray-800 hover:text-blue-700 font-semibold">Contact</a>
+            </nav>
+            <div class="mt-8 flex flex-col items-center space-y-4">
+                <a href="tel:0636344144" class="inline-flex items-center space-x-2 text-blue-700 font-semibold text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span>06 36 34 41 44</span>
+                </a>
+                <a href="tel:0986348213" class="inline-flex items-center space-x-2 text-blue-700 font-semibold text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span>09 86 34 82 13</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-cover bg-center h-[500px] md:h-[650px] flex items-center" 
+                 style="background-image: url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&w=1600&q=80');"
+                 data-aos="fade-up" data-aos-duration="1000">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 py-12 md:px-8 md:py-24 text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
+                    RLT : Votre Artisan Polyvalent en Rénovation Intérieure
+                </h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto drop-shadow-md">
+                    À Pontault-Combault (77), un interlocuteur unique pour vos projets : menuiserie, plomberie, peinture, serrurerie.
+                </p>
+                <div data-aos="fade-up" data-aos-delay="500">
+                    <a href="#contact" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                        Demandez votre devis gratuit
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-white px-4 py-12 md:px-8 md:py-24">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-6">
+                        Qui sommes-nous ? Votre partenaire rénovation en Seine-et-Marne
+                    </h2>
+                    <p class="text-lg leading-relaxed mb-4">
+                        Fondée à Pontault-Combault (77310), RLT est une entreprise artisanale dédiée à la 
+                        rénovation intérieure. Nous simplifions vos projets en vous offrant un <strong>interlocuteur unique</strong> 
+                        pour l'ensemble de vos travaux, de la conception à la réalisation.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-4">
+                        Notre expertise multi-métiers (menuiserie, plomberie, peinture, serrurerie) nous permet de 
+                        prendre en charge vos chantiers de A à Z, garantissant une <strong>coordination parfaite</strong>, 
+                        un respect des délais et des finitions de haute qualité.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Intervenant à Pontault-Combault et ses environs (Roissy-en-Brie, Émerainville, Lésigny), 
+                        RLT est le choix de confiance pour transformer votre habitat.
+                    </p>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80" alt="Intérieur de maison rénové par RLT" class="rounded-2xl shadow-xl border-4 border-blue-100">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="bg-gray-50 px-4 py-12 md:px-8 md:py-24">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4" data-aos="fade-down">
+                    Nos Prestations Multi-Métiers pour votre Habitat
+                </h2>
+                <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-down" data-aos-delay="200">
+                    Que ce soit pour une rénovation complète, un aménagement sur mesure ou un dépannage urgent, 
+                    RLT met à votre service un savoir-faire polyvalent et une expertise reconnue.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1504887868356-47b00fab8f88?auto=format&fit=crop&w=800&q=80" alt="Service Menuiserie" class="w-full h-48 object-cover rounded-xl mb-6 shadow-md">
+                        <h3 class="text-2xl font-bold text-blue-700 mb-3">Menuiserie</h3>
+                        <p class="text-gray-600 text-center">
+                            Fabrication et pose de portes, fenêtres, placards, parquets, escaliers. Agencements sur mesure en bois, alu, PVC.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://images.unsplash.com/photo-1605117882932-f9e32b03fea9?auto=format&fit=crop&w=800&q=80" alt="Service Plomberie Cuisine" class="w-full h-48 object-cover rounded-xl mb-6 shadow-md">
+                        <h3 class="text-2xl font-bold text-blue-700 mb-3">Plomberie</h3>
+                        <p class="text-gray-600 text-center">
+                            Dépannage fuites, installation sanitaires, rénovation salles de bains, raccordements cuisines, chauffe-eau.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="500">
+                        <img src="https://images.unsplash.com/photo-1562259929-d6d9f6b5c6e1?auto=format&fit=crop&w=800&q=80" alt="Service Peinture" class="w-full h-48 object-cover rounded-xl mb-6 shadow-md">
+                        <h3 class="text-2xl font-bold text-blue-700 mb-3">Peinture</h3>
+                        <p class="text-gray-600 text-center">
+                            Préparation surfaces, peinture intérieure/extérieure, revêtements muraux, papiers peints, effets décoratifs.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="600">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Service Serrurerie / Dépannage" class="w-full h-48 object-cover rounded-xl mb-6 shadow-md">
+                        <h3 class="text-2xl font-bold text-blue-700 mb-3">Serrurerie</h3>
+                        <p class="text-gray-600 text-center">
+                            Dépannage ouverture porte, pose serrures multipoints, blindage porte, copie clés. Intervention rapide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="bg-white px-4 py-12 md:px-8 md:py-24">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4" data-aos="fade-down">
+                    Pourquoi choisir RLT pour votre rénovation ?
+                </h2>
+                <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-down" data-aos-delay="200">
+                    Nous nous engageons à offrir un service irréprochable et des résultats qui dépassent vos attentes.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-blue-50 p-6 rounded-2xl shadow-md text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.275a1.125 1.125 0 011.026.176l.128.093c.156.126.313.348.313.626v5.801c0 1.25-.852 2.321-2.072 2.607C16.326 19.336 14 19.5 12 19.5s-4.326-.164-5.696-.443C5.088 18.22 4.236 17.15 4.236 15.9V10.1c0-.278.157-.5.313-.626l.128-.093a1.125 1.125 0 011.026-.176l.721.216c.356.108.736.176 1.129.191C8.082 9.5 9.176 9.5 10.5 9.5H12c.792 0 1.572.01 2.336.03a1.597 1.597 0 001.071.365z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Artisanat Polyvalent</h3>
+                        <p class="text-gray-700">Maîtrise de plusieurs corps d'état (menuiserie, plomberie, peinture, serrurerie) pour une rénovation complète et cohérente.</p>
+                    </div>
+
+                    <div class="bg-blue-50 p-6 rounded-2xl shadow-md text-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.333 0 2.5.667 2.5 2s-1.167 2-2.5 2S9.5 11.333 9.5 10s1.167-2 2.5-2z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11a7 7 0 100-14 7 7 0 000 14z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12a7 7 0 11-14 0 7 7 0 0114 0zM12 16a4 4 0 100-8 4 4 0 000 8z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20a8 8 0 100-16 8 8 0 000 16z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12a.5.5 0 11-1 0 .5.5 0 011 0z" />
+                            </svg>
+
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Interlocuteur Unique</h3>
+                        <p class="text-gray-700">Simplifiez vos projets de rénovation avec un seul contact pour tous vos besoins, pour une gestion fluide.</p>
+                    </div>
+
+                    <div class="bg-blue-50 p-6 rounded-2xl shadow-md text-center" data-aos="fade-up" data-aos-delay="500">
+                        <div class="flex justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Qualité & Garantie</h3>
+                        <p class="text-gray-700">Utilisation de matériaux de qualité, respect des délais, nettoyage de chantier et garantie décennale.</p>
+                    </div>
+
+                    <div class="bg-blue-50 p-6 rounded-2xl shadow-md text-center" data-aos="fade-up" data-aos-delay="600">
+                        <div class="flex justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.592 1L19.78 6.01A5.968 5.068 0 0019 12a6.002 6.002 0 01-4 5.659L12 19a4 4 0 01-5-3.873M6 12a6 6 0 0112 0 6 6 0 01-12 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10a.5.5 0 11-1 0 .5.5 0 011 0zM15 10a.5.5 0 11-1 0 .5.5 0 011 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Devis Détaillé & Gratuit</h3>
+                        <p class="text-gray-700">Obtenez un devis transparent et personnalisé, sans aucun engagement, pour vos travaux de rénovation.</p>
+                    </div>
+
+                    <div class="bg-blue-50 p-6 rounded-2xl shadow-md text-center" data-aos="fade-up" data-aos-delay="700">
+                        <div class="flex justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3 .895-3 2 1.343 2 3 2m0-8c1.11 0 2.08.402 2.592 1L19.78 6.01A5.968 5.068 0 0019 12a6.002 6.002 0 01-4 5.659L12 19a4 4 0 01-5-3.873M6 12a6 6 0 0112 0 6 6 0 01-12 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Interventions Urgentes</h3>
+                        <p class="text-gray-700">Service de dépannage rapide pour les urgences serrurerie et plomberie dans votre secteur.</p>
+                    </div>
+
+                    <div class="bg-blue-50 p-6 rounded-2xl shadow-md text-center" data-aos="fade-up" data-aos-delay="800">
+                        <div class="flex justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Proximité & Réactivité</h3>
+                        <p class="text-gray-700">Basés à Pontault-Combault, nous intervenons rapidement dans le sud de la Seine-et-Marne.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="bg-blue-700 text-white px-4 py-12 md:px-8 md:py-24 text-center" data-aos="zoom-in">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">
+                    Prêt à transformer votre intérieur ?
+                </h2>
+                <p class="text-lg md:text-xl mb-8">
+                    Contactez RLT dès aujourd'hui pour un devis personnalisé et sans engagement. Votre projet, notre expertise !
+                </p>
+                <a href="#contact" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Contactez-nous
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white px-4 py-12 md:px-8 md:py-24">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4 text-center" data-aos="fade-down">
+                    Contactez RLT - Votre artisan à Pontault-Combault
+                </h2>
+                <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto text-center" data-aos="fade-down" data-aos-delay="200">
+                    Nous sommes à votre écoute pour discuter de vos projets de rénovation ou pour une intervention urgente.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div data-aos="fade-right" data-aos-duration="1000">
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-4">Nos coordonnées</h3>
+                        <p class="text-gray-700 text-lg mb-2"><strong>Téléphone :</strong> 
+                            <a href="tel:0636344144" class="text-blue-600 hover:underline">06 36 34 41 44</a> / 
+                            <a href="tel:0986348213" class="text-blue-600 hover:underline">09 86 34 82 13</a>
+                        </p>
+                        <p class="text-gray-700 text-lg mb-2"><strong>Adresse :</strong> Pontault-Combault (77310), Seine-et-Marne</p>
+                        <p class="text-gray-700 text-lg mb-4">
+                            <strong>Zone d'intervention :</strong> Pontault-Combault, Roissy-en-Brie, Émerainville, Lésigny et le sud de la Seine-et-Marne.
+                        </p>
+
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-4 mt-8">Formulaire de contact</h3>
+                        <form action="#" method="POST" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Nom et Prénom</label>
+                                <input type="text" id="name" name="name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" id="email" name="email" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Téléphone (facultatif)</label>
+                                <input type="tel" id="phone" name="phone" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Votre message ou demande de devis</label>
+                                <textarea id="message" name="message" rows="5" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                                Envoyer ma demande
+                            </button>
+                        </form>
+                    </div>
+
+                    <div data-aos="fade-left" data-aos-duration="1000">
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-4">Où nous trouver</h3>
+                        <iframe class="w-full h-64 md:h-full rounded-xl shadow-lg border border-gray-200" src="https://maps.google.com/maps?q=RLT RLT est une entreprise artisanale de menuiserie et rénovation intérieure située à Pontault-Combault (77310), en Seine-et-Marne, offrant des services multi-métiers pour l'habitat : menuiserie, plomberie, peinture et dépannage serrurerie. Fondée pour accompagner les particuliers dans leurs projets de rénovation complète, elle propose un interlocuteur unique pour éviter la multiplication des artisans et garantir coordination parfaite. Positionnement et expertise • Artisan polyvalent intervenant à Pontault-Combault et environs (Roissy-en-Brie, Émerainville, Lésigny), spécialisé dans la rénovation tous corps d'état pour maisons et appartements. • Compétences complémentaires : menuiserie bois/alu/PVC, plomberie sanitaire, peinture décorative, serrurerie d'urgence, pour projets clés en main du début à la fin. • Engagement : devis gratuit détaillé, matériaux de qualité, respect délais, nettoyage chantiers, garantie décennale sur installations. Prestations principales • Menuiserie : Fabrication/pose portes, fenêtres, placards, parquets, escaliers, agencements sur mesure (bois, alu, PVC). • Plomberie : Dépannage fuites, installation sanitaires, rénovation salles de bains, raccordements cuisines, chauffe-eau. • Peinture : Préparation surfaces, peinture intérieure/extérieure, revêtements muraux, papiers peints, effets décoratifs. • Serrurerie : Dépannage ouverture porte, pose serrures multipoints, blindage porte, copie clés, intervention rapide urgence. Savoir-faire et engagement • Travaux multi-corps d'état : diagnostic global, réalisation coordonnée pour économies temps/budget, finitions haut de gamme adaptées au goût client. • Interventions urgentes serrurerie/plomberie, chantiers particuliers (rénovation appartement, extension maison, rafraîchissement complet). • Avis clients positifs sur PagesJaunes pour réactivité, qualité menuiserie, propreté et prix compétitifs. Services et usages • Idéal pour particuliers : rénovation globale intérieure, dépannage express, aménagement sur mesure (cuisine équipée, salle de bain moderne). • Devis personnalisé gratuit ; paiement flexible (CB, chèques, espèces) ; assurances RC pro et décennale. • Zone d'intervention : Pontault-Combault et sud Seine-et-Marne (proche Marne-la-Vallée). Localisation et informations pratiques • Adresse : Pontault-Combault (77310), détails précis via PagesJaunes ; accessible RER E. • Contact : Téléphone/horaires sur PagesJaunes ; appels pour urgences serrurerie ou RDV menuiserie.&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white px-4 py-8 md:px-8">
+        <div class="max-w-7xl mx-auto text-center md:flex md:justify-between md:items-center">
+            <p class="mb-4 md:mb-0">&copy; 2024 RLT - Rénovation. Tous droits réservés.</p>
+            <div class="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
+                <a href="#about" class="hover:text-blue-400">Qui sommes-nous</a>
+                <a href="#services" class="hover:text-blue-400">Nos services</a>
+                <a href="#contact" class="hover:text-blue-400">Contact</a>
+                <a href="tel:0636344144" class="hover:text-blue-400">06 36 34 41 44</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // Whether animation should happen only once - while scrolling down
+            duration: 800, // duration of the animation in ms
+            easing: 'ease-out-quad', // easing options
+        });
+    </script>
+
+</body>
+</html>
